@@ -26,7 +26,7 @@ export class ConnectStore {
     return this.state.walletAddress
   }
 
-  async addTodo() {
+  async addTodo():Promise<void> {
       const provider = new providers.Web3Provider((window as any).ethereum)
       const singer = provider.getSigner()
       const walletAddress = await singer.getAddress()
